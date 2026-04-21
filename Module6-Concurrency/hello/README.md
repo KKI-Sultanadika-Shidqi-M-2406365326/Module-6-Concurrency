@@ -36,5 +36,10 @@ conclusion:  concurrency is important. Without it, one slow request can make the
 
 - With ThreadPool, requests are assigned to different threads, so they can run in parallel. This makes the server faster and more responsive.
 
+## Bonus Reflection Notes:
+
+Changed the function from new to build. The main idea is that build returns a Result, so it can handle errors instead of assuming everything will always work.
+
+For example, if the ThreadPool size is 0, it will return an error instead of creating something invalid. This makes the program safer and more reliable.
 
 
