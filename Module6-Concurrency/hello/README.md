@@ -20,3 +20,13 @@ Now I check the request line. If it’s GET / HTTP/1.1, I return hello.html with
 
 This makes the server a bit smarter since it can respond differently based on the URL. I also understand better how HTTP requests work and how servers decide what to send back.
 
+## Commit 4 Reflection Notes:
+
+![Commit 4 Screencapture](img_2.png)
+
+Added a /sleep route that makes the server wait for 10 seconds before responding. At first it felt like the website was broken, but actually it’s just delayed on purpose.
+
+When I open /sleep, other requests also get delayed. This happens because the server handles requests one at a time, so everything gets blocked while it’s sleeping.
+
+conclusion:  concurrency is important. Without it, one slow request can make the whole server unresponsive.
+
