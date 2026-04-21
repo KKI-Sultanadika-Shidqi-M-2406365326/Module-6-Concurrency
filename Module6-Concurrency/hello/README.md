@@ -30,3 +30,11 @@ When I open /sleep, other requests also get delayed. This happens because the se
 
 conclusion:  concurrency is important. Without it, one slow request can make the whole server unresponsive.
 
+## Commit 5 Reflection Notes:
+
+- Used a ThreadPool to make the server handle multiple requests at the same time. Before this, the server was single-threaded, so one slow request like /sleep would block everything.
+
+- With ThreadPool, requests are assigned to different threads, so they can run in parallel. This makes the server faster and more responsive.
+
+
+
