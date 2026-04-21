@@ -12,6 +12,8 @@ Overall, this function shows how a simple web server can read and understand inc
 
 ## Commit 3 Reflection Notes:
 
+![Commit 3 screencapture](img_1.png)
+
 In this part, I changed the server so it doesn’t always return the same page. Before, every URL just showed hello.html, which isn’t realistic.
 
 Now I check the request line. If it’s GET / HTTP/1.1, I return hello.html with 200 OK. If not, I return a 404 NOT FOUND page.
