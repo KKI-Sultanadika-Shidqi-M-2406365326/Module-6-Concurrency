@@ -2,16 +2,15 @@ use std::{
     fs,
     io::{prelude::*, BufReader},
     net::{TcpListener, TcpStream},
-    thread,
-    time::Duration,
 };
 
-use hello::ThreadPool;
+use hello::ThreadPool; // use your crate name
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
 
-    let pool = ThreadPool::new(4);
+    // use build instead of new
+    let pool = ThreadPool::build(4).unwrap();
 
     for stream in listener.incoming() {
         let stream = stream.unwrap();
